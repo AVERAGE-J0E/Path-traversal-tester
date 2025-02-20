@@ -4,7 +4,7 @@ This basic script is a **Path Traversal Brute Force Tester** designed to test we
 ## 🔧 Command-Line Arguments
 
 ```sh
-python path_traversal.py -t <TARGET_URL> [options]
+python3 path_traversal.py -t <TARGET_URL> [options]
 ```
 
 ### **Required Arguments**
@@ -23,19 +23,19 @@ python path_traversal.py -t <TARGET_URL> [options]
 ### **Example Usage**
 1. **Basic Test**
    ```sh
-   python path_traversal.py -t "http://example.com/download?path="
+   python3 path_traversal.py -t "http://example.com/download?path="
    ```
 2. **Increasing Traversal Depth**
    ```sh
-   python path_traversal.py -t "http://example.com/download?path=" -d 20
+   python3 path_traversal.py -t "http://example.com/download?path=" -d 20
    ```
 3. **Looking for a Different File**
    ```sh
-   python path_traversal.py -t "http://example.com/download?path=" -f "var/www/html/config.php"
+   python3 path_traversal.py -t "http://example.com/download?path=" -f "var/www/html/config.php"
    ```
 4. **Using Custom Headers**
    ```sh
-   python path_traversal.py -t "http://example.com/download?path=" -H "User-Agent: Mozilla/5.0" -H "Authorization: Bearer TOKEN"
+   python3 path_traversal.py -t "http://example.com/download?path=" -H "User-Agent: Mozilla/5.0" -H "Authorization: Bearer TOKEN"
    ```
 
 ## ⚠️ Disclaimer
