@@ -19,6 +19,8 @@ python3 path_traversal.py -t <TARGET_URL> [options]
 | `-f, --file` | File path to attempt access (exclude first `/`) | `etc/passwd` |
 | `-e, --expected-string` | String expected in response (indicating success) | `root:x:` |
 | `-H, --header` | Custom headers (format: `Key: Value`). Can be used multiple times. | `None` |
+| `-C, --cookie` | Custom cookies (format: `Key=Value`). Can be used multiple times. | `None` |
+
 
 ### **Example Usage**
 1. **Basic Test**
@@ -37,7 +39,10 @@ python3 path_traversal.py -t <TARGET_URL> [options]
    ```sh
    python3 path_traversal.py -t "http://example.com/download?path=" -H "User-Agent: Mozilla/5.0" -H "Authorization: Bearer TOKEN"
    ```
-
+5. **Using Custom Cookies**
+   ```sh
+   python path_traversal.py -t "http://example.com/download?path=" -C "session=abcd1234"
+   ```
 ## ⚠️ Disclaimer
 This tool is intended for educational purposes and **authorized security testing only**. Unauthorized use against systems without explicit permission is illegal.
 
